@@ -87,7 +87,10 @@ How will you approach each other and the challenge of building an application kn
 
 * Open communication, understanding strengths and weaknesses, explain it best way possible/simple terms.  
 
-Frontend:
+Frontend:  
+
+* [Deployed Web Address](https://can-of-books301.netlify.app/)  
+* [GitHub Repo](https://github.com/DariusO92/Can-of-books-frontend.git)
 
 Backend:  
 
