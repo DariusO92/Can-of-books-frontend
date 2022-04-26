@@ -49,7 +49,7 @@ class BestBooks extends React.Component {
               <img
               className="d-block w-100"
                 src="https://cdn.elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-1024x640.jpeg"
-                alt="book image"
+                alt="book"
               />
               <Carousel.Caption>
                 <h3>{book.title}</h3>
