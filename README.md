@@ -109,3 +109,13 @@ Finish time: 7pm
 Actual time needed to complete: 5 1/2 hours
 
 ___
+
+Name of feature: Add and delete functionality
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1:30pm
+
+Finish time: TBD
+
+Actual time needed to complete: TBD
