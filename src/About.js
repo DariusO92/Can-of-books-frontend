@@ -1,14 +1,17 @@
 import { Component } from "react";
 
-class Profile extends Component {
+class About extends Component {
 
   render() {
     /* TODO: render information about the developers */
     return (
       <>
-      <p>Darius</p>
-      <p>Liesl</p>
-      <p>Gina</p>
+      <h1>Darius</h1>
+      <p>Books Books Books</p>
+      <h2>Liesl</h2>
+      <p>Books Books Books</p>
+      <h3>Gina</h3>
+      <p>Books Books Books</p>
       </>
     )
 
@@ -16,4 +19,4 @@ class Profile extends Component {
   }
 };
 
-export default Profile;
+export default About;
