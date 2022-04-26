@@ -1,75 +1,88 @@
 import React from 'react';
-import axios from 'axios';
-import { Carousel } from 'react-bootstrap';
+// import axios from 'axios';
+// import BookCarousel from './BookCarousel';
+// import BookForm from './BookForm';
 
-let SERVER = process.env.REACT_APP_SERVER;
+//need to create a separate component called "bookform" that'll be a form within a modal
+
+// let SERVER = process.env.REACT_APP_SERVER;
 
 class BestBooks extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: []
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     books: []
+  //   }
+  // }
 
-  /* TODO: Make a GET request to your API to fetch all the books from the database  */
+  // getBooks = async () => {
+  //   try {
+  //     let results = await axios.get(`${SERVER}/book`);
+  //     this.setState({
+  //       books: results.data
+  //     })
+  //   } catch (error) {
+  //     console.log('error', error.response);
+  //   }
+  // }
 
-  getBooks = async () => {
-    try {
-      let results = await axios.get(`${SERVER}/book`);
-      this.setState({
-        books: results.data
-      })
-    } catch (error) {
-      console.log('error', error.response);
-    }
-  }
+  // postBook = async (newBook) => {
+  //   try {
+  //     let results = `${SERVER}/book`
+  //     let createdBook = await axios.post(results, newBook);
+  //     console.log(createdBook.data);
+  //     this.setState({
+  //       books: [...this.state.books, createdBook.data]
+  //     });
+  //   } catch(error) {
+  //     console.log('Error: ', error.response.data);
+  //   }
+  // }
 
-  componentDidMount() {
-    this.getBooks();
-  }
+  // deleteBook = async (id) => {
+  //   try {
+  //     let results = `${SERVER}/book/${id}`;
+  //     await axios.delete(results+);
+  //     let updatedBooks = this.state.books.filter(book => book._id !== id);
+  //     this.setState({
+  //       books: updatedBooks
+  //     });
+  //   } catch(error) {
+  //     console.log('Error: ', error.response.data);
+  //   }
+  // }
+
+  // handleBookSubmit = (e) => {
+  //   e.preventDefault();
+  //   let book = {
+  //     title: e.target.name.value, 
+  //     description: e.target.description.value, 
+  //     //this is how we the value from a checkbox
+  //     status: e.target.status.checked
+  //   }
+  //   this.postBook(book);
+  // }
+
+  // componentDidMount() {
+  //   this.getBooks();
+  // }
+
   render() {
-
-    /* TODO: render all the books in a Carousel */
-    // <p key={idx}>{element.title}</p>
-
 
     return (
       <>
-      
-      <h2>Book Shelf</h2>
 
-       {this.state.books.length ? (
-      <div style={{display:'block',width:700,padding:30}}>
-        <Carousel>
+        <h2>Book Shelf</h2>
 
-        {this.state.books.map((book) => {
-          return (
-            <Carousel.Item>
-              <img
-              className="d-block w-100"
-                src="https://cdn.elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-1024x640.jpeg"
-                alt="book"
-              />
-              <Carousel.Caption>
-                <h3>{book.title}</h3>
-                <p>{book.description}</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          );
-        })}
-      </Carousel>
+        {this.state.books.length ? (
+          <BookCarousel
+            books={this.state.books}
+          />
 
-        {/* render component this.state.books(send as prop to component, this.props.books) */}
-      </div>
-
-
-       ) : (
-           <h3>No Books Found :(</h3>
-       )}
-        </>
-
-
+        ) : (
+          <h3>No Books Found :(</h3>
+        )}
+      </>
     )
   }
 }
