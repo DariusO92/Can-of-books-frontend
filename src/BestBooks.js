@@ -1,30 +1,30 @@
 import React from 'react';
-import axios from 'axios';
-import BookCarousel from './BookCarousel';
+// import axios from 'axios';
+// import BookCarousel from './BookCarousel';
 // import BookForm from './BookForm';
 
 //need to create a separate component called "bookform" that'll be a form within a modal
 
-let SERVER = process.env.REACT_APP_SERVER;
+// let SERVER = process.env.REACT_APP_SERVER;
 
 class BestBooks extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: []
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     books: []
+  //   }
+  // }
 
-  getBooks = async () => {
-    try {
-      let results = await axios.get(`${SERVER}/book`);
-      this.setState({
-        books: results.data
-      })
-    } catch (error) {
-      console.log('error', error.response);
-    }
-  }
+  // getBooks = async () => {
+  //   try {
+  //     let results = await axios.get(`${SERVER}/book`);
+  //     this.setState({
+  //       books: results.data
+  //     })
+  //   } catch (error) {
+  //     console.log('error', error.response);
+  //   }
+  // }
 
   // postBook = async (newBook) => {
   //   try {
@@ -63,9 +63,9 @@ class BestBooks extends React.Component {
   //   this.postBook(book);
   // }
 
-  componentDidMount() {
-    this.getBooks();
-  }
+  // componentDidMount() {
+  //   this.getBooks();
+  // }
 
   render() {
 
