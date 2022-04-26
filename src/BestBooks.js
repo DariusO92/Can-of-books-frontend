@@ -1,5 +1,5 @@
-import axios from 'axios';
 import React from 'react';
+import axios from 'axios';
 
 let SERVER = process.env.REACT_APP_SERVER;
 
@@ -30,13 +30,20 @@ class BestBooks extends React.Component {
   render() {
 
     /* TODO: render all the books in a Carousel */
+    let books = this.state.books.map( (element, idx) => (
+      <p key={idx}>{element.title}</p>
+    ))
 
     return (
       <>
-        <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
-
+        <h2>Book Shelf</h2>
+       
         {this.state.books.length ? (
-          <p>Book Carousel coming soon</p>
+          // <p>Book Carousel coming soon</p>
+          <>
+          {books} 
+          {/* render component this.state.books(send as prop to component, this.props.books) */}
+          </>
         ) : (
           <h3>No Books Found :(</h3>
         )}
