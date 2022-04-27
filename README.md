@@ -8,7 +8,7 @@
 
 ## Overview  
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+Welcome to Can of Books! Essentially, users will be able to add, update, and delete their favorite books on their book shelf. Whatever books they will be displayed on a carousel for easy viewing on their collection. 
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -27,8 +27,11 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 ## Estimates
 <!-- See below -->
 
-## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+## Credit and Collaborations  
+
+Thank you to the TAs, our peers, and our instructor for all your help!
+
+Resources:
 
 ___
 
@@ -49,7 +52,6 @@ How often will you take breaks?
 What is your plan if you start to fall behind?
 
 * Get help from TA/instructor/peers when we need it  
-
 
 ### Cooperative  
 
@@ -120,3 +122,15 @@ Start time: 1:30pm
 Finish time: 5:17
 
 Actual time needed to complete: 3 hours 30 mintues
+
+___
+
+Name of feature: Update feature
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 2:00pm
+
+Finish time: TBD
+
+Actual time needed to complete: TBD  
