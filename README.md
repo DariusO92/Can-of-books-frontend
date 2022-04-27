@@ -1,6 +1,6 @@
-# Can of Books (Backend)  
+# Can of Books (Frontend)  
 
-**Authors**:
+**Authors**:  
 [Darius O](https://github.com/DariusO92)  
 [Liesl White](https://github.com/LieslW)  
 [Gina N.](https://github.com/gina305)  
@@ -91,10 +91,11 @@ Frontend:
 
 * [Deployed Web Address](https://can-of-books301.netlify.app/)  
 * [GitHub Repo](https://github.com/DariusO92/Can-of-books-frontend.git)
+
 Backend:  
 
 * [Deployed Web Address](https://can-of-books-backend2022.herokuapp.com/)
-* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git)
+* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git
 
 ___
 
