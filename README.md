@@ -87,7 +87,7 @@ How will you approach each other and the challenge of building an application kn
 
 * Open communication, understanding strengths and weaknesses, explain it best way possible/simple terms.  
 
-Frontend:  
+Frontend:
 
 * [Deployed Web Address](https://can-of-books301.netlify.app/)  
 * [GitHub Repo](https://github.com/DariusO92/Can-of-books-frontend.git)
@@ -95,4 +95,28 @@ Frontend:
 Backend:  
 
 * [Deployed Web Address](https://can-of-books-backend2022.herokuapp.com/)
-* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git)
+* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git
+
+___
+
+Name of feature: Mongo DB setup and book initializing
+
+Estimate of time needed to complete: 5 hours
+
+Start time: 1:30pm
+
+Finish time: 7pm
+
+Actual time needed to complete: 5 1/2 hours
+
+___
+
+Name of feature: Add and delete functionality
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1:30pm
+
+Finish time: 5:17
+
+Actual time needed to complete: 3 hours 30 mintues
