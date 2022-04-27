@@ -1,4 +1,5 @@
 import React from 'react';
+import UpdateBookForm from './UpdateBookForm';
 import { Button, Carousel } from 'react-bootstrap';
 
 let caroBook = "https://cdn.elearningindustry.com/wp-content/uploads/2016/05/top-10-books-every-college-student-read-1024x640.jpeg"
@@ -8,6 +9,13 @@ class BookCarousel extends React.Component {
   render() {
     return (
       <>
+      <UpdateBookForm 
+       books={this.props.books}
+       showModal={this.props.showModal}
+       hideModal={this.props.hideModal}
+       updateBook={this.props.updateBook}
+      />
+
         <h2>Book Shelf</h2>
           <div style={{ display: 'block', width: 700, padding: 30 }}>
             <Carousel>

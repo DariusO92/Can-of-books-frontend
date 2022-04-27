@@ -74,6 +74,26 @@ openModal = () => {
     }
   }
 
+  updateBook = async (bookToUpdate) => {
+    try {
+      let results = `${SERVER}/book/${bookToUpdate._id}`
+      let updatedBook = await axios.put(results, bookToUpdate);
+      let updatedBookArr = this.state.books.map(existingBook => {
+          return existingBook._id === bookToUpdate._id
+          ? updatedBook.data
+          : existingBook;
+      })
+      // console.log(updatedBook.data);
+      this.setState({
+        books: updatedBookArr
+      });
+    } catch(error) {
+      console.log('Error: ', error.response.data);
+    }
+  }
+
+
+
   handleBookSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.title.value)
@@ -108,7 +128,9 @@ openModal = () => {
               <BookCarousel 
               books={this.state.books}
               deleteBook={this.deleteBook}
-              // openModal={this.openModal}
+              showModal={this.state.showModal}
+              hideModal={this.hideModal}
+              updateBook={this.updateBook}
               /> 
         ) : (
             <p>No Books Found</p>
