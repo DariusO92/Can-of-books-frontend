@@ -1,23 +1,23 @@
 import React from 'react';
-import Modal from 'react-bootstrap';
-import Form from 'react-bootstrap';
-import Button from 'react-bootstrap';
+import { Modal, Form, Button } from 'react-bootstrap';
 
 
 class UpdateBookForm extends React.Component {
 
-  handleUpdateSubmit = e.preventDefault();
-  console.log(e.target.title.value)
-  // let book = {
-  //   title: e.target.title.value, 
-  //   description: e.target.description.value, 
-  //   status: e.target.status.value,
-  // }
-  this.setState({
-    showModal:false
-  });
-  this.postBook(book);
-  
+  handleUpdateSubmit = (e) => {
+  e.preventDefault();
+  let bookWithUpdate = {
+    //IF user changes value, update
+    //IF they don't, keep the same
+    title: e.target.title.value || this.props.bookInfo.title,
+    description: e.target.description.value || this.props.bookInfo.description,
+    status: e.target.status.value || this.props.bookInfo.status,
+    _id: this.props.bookInfo._id,
+    _v: this.props.bookInfo._v
+  }
+  this.props.updateBook(bookWithUpdate)
+  //send data back to App.js
+}
 
 
 
@@ -30,22 +30,22 @@ class UpdateBookForm extends React.Component {
         >
           {/* brings in modal functions from app.js as props to handle modal functionality  */}
           <Modal.Header closeButton />
-          <Form onSubmit={this.props.handleBookSubmit}>
+          <Form onSubmit={this.handleUpdateSubmit}>
             {/* brings in handle from app.js as props */}
             <Form.Group controlId="title">
               <Form.Label>title</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type="text" placeholder={this.props.bookInfo.title}/>
             </Form.Group>
             <Form.Group controlId="description">
               <Form.Label>description</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type="text" placeholder={this.props.bookInfo.description}/>
             </Form.Group>
             <Form.Group controlId="status">
               <Form.Label>status</Form.Label>
-              <Form.Control type="text" />
+              <Form.Control type="text" placeholder={this.props.bookInfo.status}/>
             </Form.Group>
             {/* everything above represents labels on the form */}
-            <Button type="submit">Add Book</Button>
+            <Button type="submit">Update Book</Button>
             {/* button submit references line 14 to save on repitition */}
           </Form>
         </Modal>

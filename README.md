@@ -97,7 +97,7 @@ Frontend:
 Backend:  
 
 * [Deployed Web Address](https://can-of-books-backend2022.herokuapp.com/)
-* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git
+* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git)
 
 ___
 
@@ -131,6 +131,6 @@ Estimate of time needed to complete: 3 hours
 
 Start time: 2:00pm
 
-Finish time: TBD
+Finish time: 4:45pm
 
-Actual time needed to complete: TBD  
+Actual time needed to complete: 2 h 45 m  

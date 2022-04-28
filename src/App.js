@@ -21,13 +21,26 @@ class App extends React.Component {
     super(props);
     this.state = {
       books: [],
-      showModal: false
+      showModal: false,
+      updateModal: false
     }
   }
 
 hideModal = () => {
   this.setState({
     showModal:false
+  });
+}
+
+hideUpdateModal = () => {
+  this.setState({
+    updateModal:false
+  });
+}
+
+openUpdateModal = () => {
+  this.setState({
+    updateModal:true
   });
 }
 
@@ -85,7 +98,8 @@ openModal = () => {
       })
       // console.log(updatedBook.data);
       this.setState({
-        books: updatedBookArr
+        books: updatedBookArr,
+        updateModal: false
       });
     } catch(error) {
       console.log('Error: ', error.response.data);
@@ -108,6 +122,13 @@ openModal = () => {
     this.postBook(book);
   }
 
+  changeBookInfo = (book) => {
+    this.setState({
+      bookInfo: book
+    })
+  }
+
+
   componentDidMount() {
     this.getBooks();
   }
@@ -128,8 +149,9 @@ openModal = () => {
               <BookCarousel 
               books={this.state.books}
               deleteBook={this.deleteBook}
-              showModal={this.state.showModal}
-              hideModal={this.hideModal}
+              showModal={this.state.updateModal}
+              openModal={this.openUpdateModal}
+              hideModal={this.hideUpdateModal}
               updateBook={this.updateBook}
               /> 
         ) : (
