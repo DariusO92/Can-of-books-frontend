@@ -6,15 +6,42 @@ let caroBook = "https://cdn.elearningindustry.com/wp-content/uploads/2016/05/top
 // put image url as separate variable above all code for cleaner look
 
 class BookCarousel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showUpdateForm: false,
+      bookInfo: {}
+    }
+  }
+
+  handleUpdateButton = (book) => {
+    // e.preventDefault();
+    this.props.openModal();
+    this.changeBookInfo(book);
+    this.setState({
+      showUpdateForm: true
+    })
+  }
+
+  changeBookInfo = (book) => {
+    this.setState({
+      bookInfo: book
+    })
+  }
+//hi
   render() {
     return (
       <>
-      <UpdateBookForm 
-       books={this.props.books}
+      {
+        this.state.showUpdateForm &&
+        <UpdateBookForm 
+        books={this.props.books}
        showModal={this.props.showModal}
        hideModal={this.props.hideModal}
        updateBook={this.props.updateBook}
-      />
+       bookInfo={this.state.bookInfo}
+       />
+      }
 
         <h2>Book Shelf</h2>
           <div style={{ display: 'block', width: 700, padding: 30 }}>
@@ -30,6 +57,9 @@ class BookCarousel extends React.Component {
                     <Carousel.Caption>
                       <h3>{book.title}</h3>
                       <p>{book.description}</p>
+                      <Button onClick={() => this.handleUpdateButton(book)}>
+                        Update
+                      </Button>
                       <Button onClick={() => this.props.deleteBook(book._id)} type="submit" variant="primary">
                         {/* brings in deleteBook function from app.js as props. Must be in format of arrow function to allow books to render before this function is enacted */}
                         Delete Book
