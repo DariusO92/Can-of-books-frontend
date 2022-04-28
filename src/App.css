@@ -1,0 +1,16 @@
+.add-button {
+    /* text-align: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* justify-items: center; */
+    /* justify-self: center; */
+    /* justify-content: center; */
+    /* place-items: center; */
+    /* vertical-align: middle; */
+    /* line-height: 100%; */
+    /* margin: auto; */
+    position: absolute;
+    left: 50%;
+    right: 39%;
+    transform: translate(-50%, -50%);
+}

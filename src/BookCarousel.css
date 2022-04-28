@@ -1,0 +1,15 @@
+h2 {
+    text-align: center;
+}
+
+.carousel-block {
+    margin: auto;
+}
+
+.update-button {
+    margin-right: 2vw;
+}
+
+.delete-button {
+    margin-left: 2vw;
+}
