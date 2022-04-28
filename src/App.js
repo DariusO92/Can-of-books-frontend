@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 import About from './About';
 import BookFormModal from './BookFormModal';
 // import BestBooks from './BestBooks';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -142,9 +143,6 @@ openModal = () => {
           <Switch>
             <Route exact path="/">
               {/* <BestBooks /> */}
-              <Button onClick={this.openModal} variant="primary" type="submit">
-          Add Book
-        </Button>
         {this.state.books.length > 0 ? (
               <BookCarousel 
               books={this.state.books}
@@ -157,6 +155,9 @@ openModal = () => {
         ) : (
             <p>No Books Found</p>
         )}
+              <Button className="add-button" onClick={this.openModal} variant="primary" type="submit">
+          Add Book
+        </Button>
               <BookFormModal
               showModal={this.state.showModal}
               hideModal={this.hideModal}
