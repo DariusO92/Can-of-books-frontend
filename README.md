@@ -97,7 +97,7 @@ Frontend:
 Backend:  
 
 * [Deployed Web Address](https://can-of-books-backend2022.herokuapp.com/)
-* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git
+* [GitHub Repo](https://github.com/gina305/can-of-books-backend.git)
 
 ___
 
