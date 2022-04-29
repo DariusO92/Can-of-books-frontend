@@ -107,8 +107,6 @@ openModal = () => {
     }
   }
 
-
-
   handleBookSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.title.value)
