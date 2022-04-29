@@ -6,6 +6,7 @@ import BookCarousel from './BookCarousel';
 import { Button } from 'react-bootstrap';
 import About from './About';
 import BookFormModal from './BookFormModal';
+import Profile from './Profile';
 // import BestBooks from './BestBooks';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,7 +24,8 @@ class App extends React.Component {
     this.state = {
       books: [],
       showModal: false,
-      updateModal: false
+      updateModal: false,
+      isLoggedIn: false,
     }
   }
 
@@ -163,6 +165,9 @@ openModal = () => {
               hideModal={this.hideModal}
               handleBookSubmit={this.handleBookSubmit}
               />
+            </Route>
+            <Route path="/profile">
+              <Profile/>
             </Route>
             <Route path="/about">
               <About />  
