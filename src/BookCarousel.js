@@ -29,7 +29,11 @@ class BookCarousel extends React.Component {
       bookInfo: book
     })
   }
-//hi
+
+  componentDidMount() {
+    this.props.getBooks();
+  }
+
   render() {
     return (
       <>
@@ -44,7 +48,8 @@ class BookCarousel extends React.Component {
        />
       }
 
-        <h2>Book Shelf</h2>
+        <h2 className="book-shelf">Book Shelf</h2>
+        {this.props.books.length > 0 ? (
           <div className="carousel-block" style={{ display: 'block', width: 700, padding: 30, align: 'center' }}>
             <Carousel align="center">
               {this.props.books.map((book, idx) => {
@@ -71,6 +76,9 @@ class BookCarousel extends React.Component {
               })}
             </Carousel>
           </div>
+          ) : (
+            <p>No Books Found</p>
+          )}
       </>
 
     )

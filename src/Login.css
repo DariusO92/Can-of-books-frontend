@@ -1,0 +1,22 @@
+.welcome {
+    text-align: center;
+}
+
+.please {
+    text-align: center;
+    margin: 2vw;
+}
+
+.form {
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+
+.login-button {
+    position: absolute;
+    left: 50%;
+    right: 42%;
+    transform: translate(-50%, -50%);
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
